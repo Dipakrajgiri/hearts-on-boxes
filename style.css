@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+
+  @media(width<740px) {
+    font-size: 50%;
+  }
+
+  @media(width<580px) {
+    font-size: 45%;
+  }
+
+  @media(width<380px) {
+    font-size: 40%;
+  }
+
+  @media(width<330px) {
+    font-size: 35%;
+  }
+
+  @media(width<290px) {
+    font-size: 30%;
+  }
+
+  @media(width<240px) {
+    font-size: 27%;
+  }
+
+  @media(width<220px) {
+    font-size: 25%;
+  }
+
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: rgb(188, 188, 207);
+
+}
+
+button {
+  display: block;
+  margin: 1rem;
+  color: #ffffff;
+  background-color: #211c1c;
+  border: 2px solid black;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 4px 4px 4px 4px #888888;
+  ;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #004f80;
+    border: 2px solid #003761;
+    transform: scale(1.2);
+    color: #ffffff;
+  }
+}
+
+.heart-emoji {
+  width: 6rem;
+}
+
+.display-none {
+  @media(width<580px) {
+    font-size: 45%;
+    display: none;
+  }
+}
+
+
+#main-board {
+
+  border: 0.5rem solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+
+  @media (width<740px) {
+    grid-template-columns: 1fr;
+  }
+
+
+  #invalidMove {
+    font-size: 2rem;
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+  }
+
+  #game-board {
+    border: 0.5rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .horizontal-span {
+      display: flex;
+    }
+
+    .horizontal-box {
+      height: 3rem;
+      width: 6rem;
+      background-color: #0449d2;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: 0.1rem solid rgb(188, 188, 207);
+
+      &:hover {
+        transform: scale(1.1);
+
+      }
+    }
+
+
+  }
+
+  .verticle-span {
+    display: flex;
+
+
+    .verticle-box {
+      cursor: pointer;
+      height: 6rem;
+      width: 3rem;
+      background-color: #0449d2;
+      transition: all 0.3s;
+      border: 0.1rem solid rgb(188, 188, 207);
+
+      &:hover {
+        transform: scale(1.1);
+
+      }
+    }
+
+    .board-box {
+      height: 6rem;
+      width: 6rem;
+      background-color: #0ed4d8;
+    }
+  }
+
+  #control-board {
+    background-color: rgb(188, 188, 207);
+    border: 0.5rem solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+  }
+
+
+  #score-board {
+    border: 0.5rem solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    background-color: rgb(188, 188, 207);
+
+
+    #score-board-card {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: center;
+
+      #score {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: left;
+
+      }
+
+      #player-one {
+        #player-one-name {
+          font-size: 3rem;
+          font-weight: bold;
+          text-align: left;
+        }
+
+        #player-one-score {
+          font-size: 3rem;
+          font-weight: bold;
+          text-align: left;
+        }
+      }
+
+      #player-two {
+        #player-two-name {
+          font-size: 3rem;
+          font-weight: bold;
+          text-align: left;
+        }
+
+        #player-two-score {
+          font-size: 3rem;
+          text-align: left;
+          font-weight: bold;
+
+        }
+      }
+    }
+  }
+}
+
+/* ------after nesting----- */
+.board-corner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  height: 3rem;
+  width: 3rem;
+
+
+}
+
+#player-form {
+  font-size: 3rem;
+  ;
+
+  @media(width>700px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #userInputOne,
+  #userInputTwo {
+    margin: 1rem 0px;
+  }
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background-color: #333;
+}
+
+footer div {
+
+  color: #fff;
+}

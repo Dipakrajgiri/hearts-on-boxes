@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="icon" type="image/x-icon" href="/images/logo-image2.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <title>Contact Us</title>
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <a href="index.html" class="logo-name"> <img src="./images/logo-image2.png" class="logo-image" alt="logo-image"></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contacts.html"> Contact</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+    <h2 class="logo-name display-none"><i>Dots&amp;Boxes</i></h2>
+  </nav>
+  <div class="container">
+    <form action="#" method="post" class="contact-form" onsubmit="sendEmail();  reset(); return false;">
+      <h2>Contact Us</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Write Message" required></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <footer>
+    <div> &copy; 2023 Dots-nd-Boxes---I. All rights reserved.</div>
+  </footer>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script>
+    function sendEmail() {
+      Email.send({
+
+        // // SecureToken: "df5c94d0-8c78-4554-a631-08178ff9328e"
+
+        Host: "smtp.elasticemail.com",
+        Username: "joshideepa988@gmail.com",
+        Password: "9A81D471FB9731C4703C73FBFE97922411E1",
+        To: 'joshideepa988@gmail.com',
+        From: document.getElementById("email").value,
+        Subject: "New Contact Form Enquiry",
+        Body: "Name"
+          + document.getElementById("name").value + "<br>  Email:" +
+          document.getElementById("email").value + "<br>  Message:" +
+
+          document.getElementById("message").value
+      }).then(
+        message => alert("Message Sent Successfully")
+      );
+    }
+  </script>
+
+</body>
+
+
+</html>

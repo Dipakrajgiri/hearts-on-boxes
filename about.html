@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="nav.css" rel="stylesheet" type="text/css" />
+   <link rel="icon" type="image/x-icon" href="/images/logo-image2.png">
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #f2f2f2;
+    }
+
+    .heading {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin: 0rem 3rem;
+
+    }
+
+    .heading h1 {
+      font-size: 4.5rem;
+      color: blue;
+      margin: 2rem;
+      position: relative;
+      text-decoration: underline;
+
+    }
+
+    .heading p {
+      font-size: 3rem;
+      color: #666;
+      margin: 2rem;
+
+
+    }
+
+    .container {
+      margin: 0rem 5rem;
+    }
+
+    .about {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+    }
+
+    .about-image {
+      display: flex;
+
+      @media(width<=1200px) {
+        flex-direction: column;
+
+      }
+    }
+
+    .image-div img {
+      width: 50rem;
+
+      height: 47rem;
+      display: block;
+      transition: 0.5s ease;
+
+
+      @media (width<=1200px) {
+        width: 60rem;
+        height: 59rem;
+        margin: auto;
+
+      }
+      @media (width<=500px) {
+        width: 50rem;
+        height: 48rem;
+        margin: auto;
+
+      }
+      @media (width<=500px) {
+        width: 40rem;
+        height: 37rem;
+        margin: auto;
+
+      }
+    }
+
+    .about-image:hover img {
+      transform: scale(0.5.0.5);
+    }
+
+    .image-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0rem;
+
+    }
+
+    .about-content {
+      margin: 0rem 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .about-content h2 {
+      font-size: 3.5rem;
+      line-height: 1.5;
+      color: black;
+      text-align: center;
+      margin-top:2rem;
+
+      @media (width<=1000px) {
+
+        margin-top: 3rem;
+      }
+    }
+
+    .about-content p {
+      font-size: 2.5rem;
+
+
+      line-height: 1.5;
+      color: #666;
+      margin:auto;
+      
+      @media(width<1200){
+        margin:2rem 5rem;
+      }
+
+    }
+
+    .lower-para{
+      font-size: 2.5rem;
+
+      line-height: 1.5;
+      color: #666;
+      margin:2rem 5rem;
+    }
+
+    .about-content .read-more {
+      display: inline-block;
+
+      color: #fff;
+      font-size: 2rem;
+      text-decoration: none;
+      border-radius: 2rem;
+      margin: 1.5rem 5rem 0rem;
+      transition: 0.3s ease;
+
+    }
+
+    .about-content .read-more:hover {
+      background-color: #3e8e41;
+    }
+
+    .button {
+
+      background-color: blue;
+      border-radius: 2rem;
+      padding: 1rem;
+       margin: 1.5rem 5rem 0rem;
+    }
+
+
+
+
+
+    /* Css of developer section */
+    .about-us {
+      margin: 7rem 5rem;
+
+
+    }
+
+    .container2 {
+
+      display: flex;
+
+
+
+    }
+
+    .row {
+      display: flex;
+
+      justify-content: space-between;
+      gap: 2rem;
+      /* align-items: center; */
+
+
+      @media(width<980px) {
+        flex-direction: column;
+        flex-start: row-reverse;
+      }
+
+    }
+
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      @media(width<980px) {
+        order: 2;
+      }
+
+    }
+
+   
+    .about-us h2 {
+      font-size: 4rem;
+      margin-bottom: 6rem;
+      color: blue;
+      text-align: center;
+      text-decoration: underline;
+      ;
+    }
+
+    .about-us h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #888;
+
+    }
+    .flex h3{
+      font-size:5rem;
+    }
+
+    .about-us p {
+      font-size: 2.5rem;
+      line-height: 1.5;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .social-media {
+      margin: 1rem 4rem;
+
+      @media(width<980px) {
+        order: -1;
+      }
+    }
+
+    .social-media a {
+
+      width: 5rem;
+      height: 6rem;
+
+
+      text-align: center;
+      line-height: 6rem;
+      margin-right: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-media img {
+      height: 4rem;
+      width: 4rem;
+      margin-left: 1rem;
+    }
+
+    .social-media img:hover {
+
+      transform: scale(1.3, 1.3);
+
+    }
+
+    .button2 {
+      text-decoration: none;
+      color: #fff;
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 1rem;
+      background-color: #333;
+      transition: all 0.4s ease;
+
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+
+    }
+
+    .developer-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      @media(width<980px) {
+        order: 1;
+      }
+    }
+
+    .developer-image img {
+      width: 45rem;
+      height: 48rem;
+      border-radius: 1rem;
+
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <img src="./images/logo-image2.png" class="logo-image" alt="logo-image">
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contacts.html"> Contact</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+    <h2 class="logo-name display-none"><i>Dots&amp;Boxes</i></h2>
+  </nav>
+  <div class="heading">
+    <h1>About Game</h1>
+    <p>Welcome to the enchanting world of Dots & Boxes, where classic meets digital in a game that transcends time. </p>
+  </div>
+  <div class="container">
+    <section class="about">
+   
+      <div class="about-image">
+        <div class="image-div"><img src="./images/game-photo.png" alt="game-pic"></div>
+
+        <div class="about-content">
+           <h2>Unveiling Childhood Smiles: Dive into the Whimsical World of Dots & Boxes </h2>
+          <p>Dots & Boxes is a delightful digital rendition of the classic pen-and-paper game. Players strategically
+            connect dots to form squares, earning points for each completed square. It's easy to learn, yet offers
+            strategic depth, making it accessible for players of all ages. The game captures the nostalgia of childhood
+            while fostering social connections in a modern, online setting. With its simplicity and timeless appeal,
+            Dots & Boxes is an engaging and inclusive gaming experience.
+          </p>
+       
+        </div>
+      </div>
+      <p class="lower-para">
+        The objective is simple yet strategic. Players take turns connecting dots to form lines, aiming to complete
+        squares. Each completed square earns a point, and the player with the most squares at the end of the game
+        emerges victorious. It's a game of wit, tactics, and careful planning, suitable for players of all ages.
+
+
+      </p>
+       <a href="readmore.html" class="read-more"> <button class="button">Read More</button></a>
+    </section>
+  </div>
+
+
+  <!-- Developer Section Below  -->
+  <div class="about-us">
+    <h2>About Us</h2>
+    <div class="container2">
+
+
+      <div class="row">
+
+        <div class="flex">
+
+          <h3>About the Developer</h3>
+          <p>
+            Hey there! I'm Dipak Raj Giri, the creator behind Dots & Boxes. My journey started with a simple vision - to
+            infuse the joy of childhood games into the digital realm. Using my skills in HTML, CSS, and JavaScript, I
+            brought Dots & Boxes to life, evolving it from an offline version coded in C++ to the dynamic online
+            experience you enjoy today. Currently navigating my fifth semester at Farwestern University, I merge
+            academic learning with hands-on game development. Dots & Boxes isn't just lines of code; it's a passion
+            project that seamlessly blends simplicity, strategy, and the pure joy of play. Thanks for joining me on this
+            digital adventure!
+          </p>
+          <div class="social-media">
+            <a href="https://github.com/Dipakrajgiri"><img class="icons" src="./icons/github-fill.svg" alt=""></a>
+            <a href="https://www.facebook.com/dipak.rajgiri.393"><img class="icons" src="./icons/facebook-fill.svg"
+                alt=""></a>
+            <a href="giridipak743@gmail.com"><img class="icons" src="./icons/linkedin-fill.svg" alt=""></a>
+            <a href="twitter.com"><img class="icon" src="./icons/email-outline.svg" alt=""></a>
+            <a href="https://www.instagram.com/giridipak743/"><img class="icon" src="./icons/instagram.svg" alt=""></a>
+          </div>
+        </div>
+
+        <div class="developer-image">
+          <img src="./images/dipak-photo.JPG" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <footer>
+    <div> &copy; 2023 Dots-nd-Boxes---I. All rights reserved.</div>
+  </footer>
+</body>
+
+</html>

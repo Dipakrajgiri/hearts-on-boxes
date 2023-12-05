@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Dots-nd-BoxesA---I</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="nav.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="/images/logo-image2.png">
+</head>
+<body>
+   
+  <nav class="nav-bar">
+    <a href="index.html" class="logo-name"> <img src="./images/logo-image2.png" class="logo-image" alt="logo-image"></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contacts.html"> Contact</a></li>
+      <li><a href="help.html">Help</a></li>
+       
+
+    </ul>
+    <h2 class="logo-name display-none"><i>Dots&amp;Boxes</i></h2>
+  </nav>
+
+  <div id="main-board">
+    <div id="invalidMove">Invalid move<button onclick="removeInvalidMove()">ok</button></div>
+    <div id="control-board">
+      <button id="play" onclick=" start()">Play </button>
+      <button id="paly-with-ai"  onclick="aiPlay()">play with AI</button>
+      <button id="play-online">Play online</button>
+      <button onclick=refresh() id="restart">Restart</button>
+    </div>
+
+    <div id="game-board">
+      <div>
+        <div class="horizontal-span">
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+        </div>
+        <div class="verticle-span">
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+        </div>
+        <div class="horizontal-span">
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+        </div>
+        <div class="verticle-span">
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+        </div>
+        <div class="horizontal-span">
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+        </div>
+        <div class="verticle-span">
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+        </div>
+        <div class="horizontal-span">
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+        </div>
+        <div class="verticle-span">
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+        </div>
+        <div class="horizontal-span">
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+        </div>
+        <div class="verticle-span">
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+          <div class="board-box"><img src="images/blue-heart.jfif" class="heart-emoji"></div>
+          <div class="verticle-box"></div>
+        </div>
+        <div class="horizontal-span">
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+          <div class="horizontal-box"></div>
+          <div class="board-corner"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="score-board">
+      <div id="score-board-card">
+        <div id="score">
+          Score:
+        </div>
+        <div id="player-one">
+          <div id="player-one-name">
+            Player One
+          </div>
+          <div id="player-one-score">
+            0
+          </div>
+        </div>
+        <div id="player-two">
+          <div id="player-two-name">
+            Player Two
+          </div>
+          <div id="player-two-score">
+            0
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div id="player-form">
+    <div>
+      <label for="userInputOne">Player one name:</label>
+      <input type="text" id="userInputOne">
+    </div>
+    <div>
+      <label for="userInputTwo">Player two name:</label>
+      <input type="text" id="userInputTwo">
+    </div>
+    <button onclick="getUserInput()">Submit</button>
+  </div>
+
+  <footer>
+    <div> &copy; 2023 Dots-nd-Boxes---I. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+  
+</body>
+
+</html>
